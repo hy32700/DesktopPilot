@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Local secrets & runtime state (NEVER commit config.json with API keys)
+config.json
+.env
+.desktop_pilot_snapshots/
+reports/*.md
+reports/*.png
+skills_cache/*.json
+!skills_cache/.gitkeep
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

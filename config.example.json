@@ -1,0 +1,55 @@
+{
+  "version": "3.0.0",
+  "routing_mode": "auto",
+  "single_endpoint_fallback": true,
+  "proxy": {
+    "enabled": false,
+    "http": "http://127.0.0.1:7897",
+    "https": "http://127.0.0.1:7897"
+  },
+  "models": {
+    "planner": {
+      "enabled": true,
+      "provider": "openai_compatible",
+      "base_url": "https://api.openai.com/v1",
+      "api_key": "YOUR_PLANNER_API_KEY",
+      "model": "gpt-4o",
+      "temperature": 0.1
+    },
+    "fast_coder": {
+      "enabled": false,
+      "provider": "openai_compatible",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "api_key": "ollama",
+      "model": "qwen2.5-coder:3b",
+      "temperature": 0.0
+    }
+  },
+  "execution": {
+    "max_steps": 25,
+    "max_coder_retries": 2,
+    "stealth_hide_console": true,
+    "hotkey_pause": "Ctrl+Alt+Space",
+    "enable_snapshots": true,
+    "dry_run": false,
+    "enable_skill_distillation": true,
+    "som_max_elements": 80,
+    "grid_fallback_threshold": 4
+  },
+  "safety": {
+    "blocked_shell_patterns": [
+      "rm -rf",
+      "del /s",
+      "rmdir /s",
+      "format ",
+      "diskpart",
+      "reg delete",
+      "shutdown",
+      "taskkill /f /im explorer.exe"
+    ],
+    "protected_paths": [
+      "C:\\\\Windows",
+      "C:\\\\Program Files"
+    ]
+  }
+}

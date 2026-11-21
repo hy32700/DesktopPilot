@@ -1,0 +1,8 @@
+# Zero-dependency standard library core works out-of-the-box!
+# Optional accelerators for Windows native UIA, COM, screenshots & serial hardware:
+Pillow>=10.0.0
+requests>=2.31.0
+pywin32>=306; sys_platform == 'win32'
+uiautomation>=2.0.18; sys_platform == 'win32'
+mss>=9.0.1
+pyserial>=3.5

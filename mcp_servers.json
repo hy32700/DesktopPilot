@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./workspace"
+      ],
+      "enabled": false
+    },
+    "serial_robotics": {
+      "command": "python",
+      "args": [
+        "hardware/serial_bridge.py",
+        "--stdio"
+      ],
+      "enabled": false
+    }
+  }
+}
